@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules # Use a named volume for node_modules
+    environment:
+      - NODE_ENV=development
+      - ROLLUP_SKIP_NODEJS_NATIVE=1
