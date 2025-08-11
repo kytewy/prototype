@@ -31,10 +31,6 @@ Use this project as a base to quickly prototype full-stack apps with modern Pyth
 make dev
 ```
 
-```bash
-docker-compose up --build -d
-```
-
 ### 2. Run backend tests
 
 ```bash
