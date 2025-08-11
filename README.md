@@ -37,11 +37,7 @@ make dev
 make test-back
 ```
 
-Runs pytest inside the backend container.
-
 ### 3. Run frontend tests
-
-Runs Vitest tests inside the frontend container.
 
 ```bash
 make test-front
