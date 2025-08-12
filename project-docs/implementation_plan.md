@@ -19,7 +19,7 @@
 **Reference:** `@[phase2-document-ops.md]`
 
 **Key Milestones:**
-- LanceDB document management
+- PostgreSQL/pgvector document management
   - Document models, embeddings, and vector search
 - Neo4j graph foundation
   - Document nodes, relationships, and graph queries

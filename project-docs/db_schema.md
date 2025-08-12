@@ -6,19 +6,19 @@
 
 | Database | Purpose | Implementation Phase |
 |----------|---------|----------------------|
-| **LanceDB** | Document content, embeddings | `@[phase2-document-ops.md]` |
+| **PostgreSQL/pgvector** | Document content, embeddings | `@[phase2-document-ops.md]` |
 | **Neo4j** | Document relationships, graph analysis | `@[phase4-db-integration.md]` |
 
 ## Core Models
 
-**Document (LanceDB):**
+**Document (PostgreSQL/pgvector):**
 ```python
 # Simplified model
 class Document:
     id: str                  # Unique identifier
     title: str               # Title
     content: str             # Full text
-    embedding: List[float]   # Vector embedding
+    embedding: List[float]   # Vector embedding (pgvector)
     region: str              # Region/jurisdiction
     topic: str               # Topic category
     document_type: str       # Document type

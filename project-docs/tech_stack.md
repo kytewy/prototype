@@ -11,9 +11,9 @@
 
 **Hybrid Database Architecture:**
 **Implementation Phase:** `@[phase2-document-ops.md]`, `@[phase4-db-integration.md]`
-- **LanceDB:** Vector database for document content, embeddings, and metadata
+- **PostgreSQL/pgvector:** Vector database for document content, embeddings, and metadata
 - **Neo4j:** Graph database for document relationships and network analysis
-- See `.windsurf/rules/lancedb.md` for detailed implementation guidelines
+- See `.windsurf/rules/lancedb.md` for detailed implementation guidelines (Note: Now using pgvector instead)
 
 **LLM Integration:**
 **Implementation Phase:** `@[phase3-llm-integration.md]`
