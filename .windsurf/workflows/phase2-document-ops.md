@@ -15,16 +15,14 @@ Implementation of core document management functionality and basic search capabi
 
 ## Steps
 
-### 2.1 LanceDB Document Management
+### 2.1 Postgres Document Management
 
 ```markdown
 1. Create Document data model
 2. Implement CRUD operations for documents
 3. Test with sample legislation documents
-
-4. Add OpenAI embedding generation
+4. Add SentenceTransformers embedding generation
 5. Test with sample legislation documents, adjust as needed
-
 6. Create vector similarity search
 7. Test with sample legislation documents, adjust as needed
 ```

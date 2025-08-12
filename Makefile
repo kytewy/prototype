@@ -25,11 +25,11 @@ test: test-back test-front
 
 # Run backend tests inside backend container
 test-back:
-	docker-compose exec backend pytest
+	docker-compose exec backend pytest -v
 
 # Run frontend tests inside frontend container
 test-front:
-	docker-compose exec frontend pnpm test
+	docker-compose exec frontend pnpm test -v
 
 ###################
 # Debug Commands #
@@ -91,3 +91,10 @@ nuke:
 	docker-compose build --no-cache frontend
 	docker-compose up -d
 	docker-compose exec frontend pnpm test
+
+nuke-back:
+	docker-compose down
+	docker system prune -f
+	docker-compose build --no-cache backend
+	docker-compose up -d
+	docker-compose exec backend pytest -v
