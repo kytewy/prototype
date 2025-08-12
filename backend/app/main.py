@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.database.vector import db_manager
-from app.routers import health, document
+from app.routers import health, document, graph
 
 # Create FastAPI application
 app = FastAPI(
@@ -26,3 +26,4 @@ app.add_middleware(
 # Include routers
 app.include_router(health.router)
 app.include_router(document.router)
+app.include_router(graph.router)
